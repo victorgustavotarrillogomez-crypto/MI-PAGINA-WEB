@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Una pregunta especial</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="escena" aria-labelledby="pregunta">
+		<div class="corazones-fondo" aria-hidden="true"></div>
+		<div class="brillo brillo-uno" aria-hidden="true"></div>
+		<div class="brillo brillo-dos" aria-hidden="true"></div>
+
+		<section class="tarjeta-pregunta">
+			<div class="sello" aria-hidden="true">&hearts;</div>
+			<p class="eyebrow">Tengo algo importante que preguntarte</p>
+			<h1 id="pregunta">¿Quieres ser mi novia?</h1>
+			<p class="subtitulo">Prometo llenar nuestros días de momentos bonitos, risas y mucho cariño.</p>
+
+			<div class="respuestas" id="respuestas">
+				<button class="boton boton-si" id="botonSi" type="button">Sí, quiero &hearts;</button>
+				<button class="boton boton-no" id="botonNo" type="button">No</button>
+			</div>
+		</section>
+	</main>
+
+	<div class="modal-aceptacion" id="modalAceptacion" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="tituloAceptacion">
+		<div class="corazones-modal" aria-hidden="true"></div>
+		<div class="decoracion-amor" aria-hidden="true"></div>
+		<div class="ventana-mensaje">
+			<button class="cerrar" id="cerrarModal" type="button" aria-label="Cerrar mensaje">&times;</button>
+			<div class="corazon-grande" aria-hidden="true">&hearts;</div>
+			<p class="eyebrow">Para nosotros</p>
+			<h2 id="tituloAceptacion">Gracias por decir que sí</h2>
+			<div class="mensaje-scroll">
+				<p>Quiero agradecerte por haber aceptado ser mi novia. No sabes lo feliz que me hace saber que desde hoy podemos compartir algo tan bonito juntos. 🥰</p>
+				<p>Prometo valorar cada momento a tu lado, escucharte, apoyarte, respetarte y hacer todo lo posible para verte sonreír. No sé qué nos deparará el futuro, pero sí sé que quiero disfrutar cada momento contigo y construir poco a poco algo muy especial.</p>
+				<p>Gracias por darme la oportunidad de estar a tu lado. Espero poder demostrarte con hechos todo el cariño que siento por ti. ❤️</p>
+				<p class="destacado"><strong>Hoy comienza una nueva historia para nosotros, y espero que sea una de las historias más bonitas de mi vida. Te quiero mucho. 💕</strong></p>
+				<button class="boton-regalo" id="botonRegalo" type="button">COSAS FAVORITAS</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-favoritos" id="modalFavoritos" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="tituloFavoritos">
+		<div class="brillos-favoritos" aria-hidden="true"></div>
+		<div class="estrellas-favoritos" aria-hidden="true"></div>
+		<div class="ventana-favoritos">
+			<button class="cerrar" id="cerrarFavoritos" type="button" aria-label="Cerrar cosas favoritas">&times;</button>
+			<div class="corazon-grande" aria-hidden="true">&hearts;</div>
+			<p class="eyebrow">Quiero conocerte más</p>
+			<h2 id="tituloFavoritos">Tus cosas favoritas</h2>
+			<form class="formulario-favoritos" id="formularioFavoritos">
+				<label for="nombre">¿Cuál es tu nombre completo?</label>
+				<input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Escribe tu respuesta" required>
+
+				<label for="comida">¿Cuál es tu comida favorita?</label>
+				<input id="comida" name="comida" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="bebida">¿Cuál es tu bebida favorita?</label>
+				<input id="bebida" name="bebida" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="fruta">¿Qué fruta te gusta más?</label>
+				<input id="fruta" name="fruta" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="color">¿Cuál es tu color favorito?</label>
+				<input id="color" name="color" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="musica">¿Qué tipo de música te gusta?</label>
+				<input id="musica" name="musica" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="cantante">¿Cuál es tu cantante o grupo favorito?</label>
+				<input id="cantante" name="cantante" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="cancion">¿Qué canción te encanta?</label>
+				<input id="cancion" name="cancion" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="pelicula">¿Qué película te gusta más?</label>
+				<input id="pelicula" name="pelicula" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="serie">¿Cuál es tu serie favorita?</label>
+				<input id="serie" name="serie" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="tipoPeliculas">¿Qué tipo de películas prefieres: románticas, terror, comedia o acción?</label>
+				<input id="tipoPeliculas" name="tipoPeliculas" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="animal">¿Cuál es tu animal favorito?</label>
+				<input id="animal" name="animal" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="lugar">¿Qué lugar te gusta visitar?</label>
+				<input id="lugar" name="lugar" type="text" placeholder="Escribe tu respuesta" required>
+
+				<label for="flor">¿Cuál es tu flor favorita?</label>
+				<input id="flor" name="flor" type="text" placeholder="Escribe tu respuesta" required>
+
+				<button class="boton-enviar" type="submit">Guardar respuestas</button>
+			</form>
+			<p class="respuesta-guardada" id="respuestaGuardada" role="status" aria-live="polite"></p>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
